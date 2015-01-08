@@ -1,4 +1,5 @@
 fixtures:
   forge_modules:
+    firewall: "puppetlabs/firewall"
   symlinks:
     networker: "#{source_dir}"

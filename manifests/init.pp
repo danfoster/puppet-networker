@@ -20,7 +20,7 @@ class networker (
   $service_ports = $networker::params::service_ports,
   $connection_ports = $networker::params::connection_ports,
   $server = $networker::params::server
-) inherits networker::params
+) inherits networker::params {
 
   $shortserver = inline_template("<%= '${server}'.split('.')[0] %>")
 
