@@ -1,5 +1,6 @@
 fixtures:
   forge_modules:
     firewall: "puppetlabs/firewall"
+    yumrepos: "gbrown/yumrepos"
   symlinks:
     networker: "#{source_dir}"

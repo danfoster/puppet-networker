@@ -70,3 +70,15 @@ This is where you list OS compatibility, version compatibility, etc.
 ## Development
 
 Pull requests are gratefully received.
+
+### Testing
+
+Beaker acceptance tests can be run using `bundle exec rake beaker`. You will have to set a few site specific environment variables to make the tests useful.
+
+  REPO: A URL to a yum repo where the Networker packages can be found
+
+
+Example:
+
+  REPO=https://packages.example.com/centos/$releasever/$basearch bundle exec rake beaker
+

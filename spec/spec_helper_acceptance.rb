@@ -27,7 +27,8 @@ RSpec.configure do |c|
     puppet_module_install(:source => proj_root, :module_name => 'networker')
     hosts.each do |host|
       # Install and dep modules, e.g. 
-      #   on host, puppet('module','install','puppetlabs-firewall'), { :acceptable_exit_codes => [0,1] }
+      on host, puppet('module','install','gbrown-yumrepos'), { :acceptable_exit_codes => [0,1] }
+      on host, puppet('module','install','puppetlabs-firewall'), { :acceptable_exit_codes => [0,1] }
     end
   end
 end
