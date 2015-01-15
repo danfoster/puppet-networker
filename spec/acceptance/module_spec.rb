@@ -27,8 +27,12 @@ end
 describe 'networker class' do
   describe 'running puppet code' do
     it 'apply manifest' do
+      server = ENV['NSRSRV']
+
       pp = <<-EOS
-        class { 'networker': }
+        class { 'networker':
+          server => '#{server}',
+        }
       EOS
 
       # Run it twice and test for idempotency

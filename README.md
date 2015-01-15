@@ -80,5 +80,5 @@ Beaker acceptance tests can be run using `bundle exec rake beaker`. You will hav
 
 Example:
 
-  REPO=https://packages.example.com/centos/$releasever/$basearch bundle exec rake beaker
+  BEAKER_destroy=no NSRSRV=anubis.bris.ac.uk REPO='http://packages.example.com/centos/$releasever/$basearch' bundle exec rake beaker
 
