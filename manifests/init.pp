@@ -77,13 +77,13 @@ ${shortserver}
   }
 
   firewall {'050 allow central backups service ports':
-    port   => $service_ports,
+    dport  => $service_ports,
     action => accept,
     source => $server
   }
 
   firewall {'050 allow central backups connection ports':
-    port   => $connection_ports,
+    dport  => $connection_ports,
     action => accept,
     source => $server
   }
