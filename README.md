@@ -26,8 +26,11 @@ class { networker:
   service_ports    => '7937-7999',
   connection_ports => '10001-30000',
   server           => 'server.example.com'
+  nsr_file         => 'puppet:///modules/networker/dotnsr'
 }
 ```
+
+Unless an alternative is specified, the default the dotnsr file is deployed.
 
 ## Limitations
 
