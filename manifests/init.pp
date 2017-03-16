@@ -19,7 +19,8 @@
 class networker (
   $service_ports = $networker::params::service_ports,
   $connection_ports = $networker::params::connection_ports,
-  $server = $networker::params::server
+  $server = $networker::params::server,
+  $nsr_file = $networker::params::nsr_file,
 ) inherits networker::params {
 
   $shortserver = inline_template("<%= '${server}'.split('.')[0] %>")
@@ -30,7 +31,7 @@ class networker (
 
   file { '/.nsr':
     ensure => file,
-    source => 'puppet:///modules/networker/dotnsr',
+    source => $nsr_file,
   }
 
   file { '/nsr/res':

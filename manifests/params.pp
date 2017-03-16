@@ -12,4 +12,5 @@ class networker::params {
   $service_ports = '7937-7999'
   $connection_ports = '10001-30000'
   $server = 'server.example.com'
+  $nsr_file = 'puppet:///modules/networker/dotnsr'
 }
