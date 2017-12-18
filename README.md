@@ -1,4 +1,6 @@
-# networker
+# **This project has moved**
+
+Please see https://github.com/uobnetops/puppet-networker for all future updates.
 
 #### Table of Contents
 
